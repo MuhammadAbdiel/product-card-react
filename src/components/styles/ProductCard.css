@@ -1,0 +1,17 @@
+.wrap {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+    .wrap {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrap {
+        grid-template-columns: repeat(1, auto);
+    }
+}
