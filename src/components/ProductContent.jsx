@@ -12,9 +12,15 @@ class ProductContent extends Component {
   }
 
   handleClick() {
-    this.setState({
-      count: this.state.count + 1,
-    });
+    if (this.state.count === this.props.product.stocked) {
+      this.setState({
+        count: this.props.product.stocked,
+      });
+    } else {
+      this.setState({
+        count: this.state.count + 1,
+      });
+    }
   }
 
   handleClickReset() {
