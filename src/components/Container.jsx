@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import CardList from "./CardList";
+import ProductCard from "./ProductCard";
 import SearchInput from "./SearchInput";
 import "./styles/Container.css";
 
@@ -28,10 +29,12 @@ class Container extends Component {
           onFilterChange={this.handleChange}
         />
         <h2>List Products</h2>
-        <CardList
-          products={this.props.products}
-          filterText={this.state.filterText}
-        />
+        <CardList>
+          <ProductCard
+            products={this.props.products}
+            filterText={this.state.filterText}
+          />
+        </CardList>
         <hr className="footer" />
         <footer>&copy; Copyright 2022 | All Right Reserved.</footer>
       </div>
